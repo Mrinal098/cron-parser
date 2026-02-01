@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import CronParser from "./CronParser.js";
 
 const input = process.argv[2];

@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "cron-parser": "./dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "parse": "node dist/index.js",

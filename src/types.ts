@@ -1,0 +1,1 @@
+export type CronParserOutputType = Record<string, number[] | string>;

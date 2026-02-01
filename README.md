@@ -41,7 +41,6 @@ command       /usr/bin/find
 
 ```bash
 npm test
-npm run test:coverage
 ```
 
 ## Project Structure
@@ -67,6 +66,5 @@ test/
 - `npm run build` - Compile TypeScript
 - `npm run parse` - Run the parser
 - `npm test` - Run tests
-- `npm run test:coverage` - Run tests with coverage
 - `npm run lint` - Check code style
 - `npm run format` - Format code

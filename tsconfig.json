@@ -17,6 +17,7 @@
     "strict": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
+    "isolatedModules": true,
     "skipLibCheck": true,
   },
   "include": ["src"],

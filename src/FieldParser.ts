@@ -10,7 +10,7 @@ export default class FieldParser {
   public parse(expression: string): number[] {
     const result: Set<number> = new Set();
 
-    const parts: string[] = expression.split(",");
+    const parts: string[] = expression.split(',');
 
     for (const part of parts) {
       this.parsePart(part, result);
@@ -20,23 +20,23 @@ export default class FieldParser {
   }
 
   private parsePart(part: string, results: Set<number>): void {
-    if (part === "*") {
+    if (part === '*') {
       this.addRange(this.min, this.max, 1, results);
       return;
     }
 
-    if (part.includes("/")) {
-      const [base, stepStr] = part.split("/");
+    if (part.includes('/')) {
+      const [base, stepStr] = part.split('/');
       if (!base || !stepStr) {
         return;
       }
 
       const step = Number(stepStr);
 
-      if (base === "*") {
+      if (base === '*') {
         this.addRange(this.min, this.max, step, results);
-      } else if (base.includes("-")) {
-        const rangeParts = base.split("-");
+      } else if (base.includes('-')) {
+        const rangeParts = base.split('-');
         if (rangeParts.length !== 2) {
           return;
         }
@@ -51,8 +51,8 @@ export default class FieldParser {
       return;
     }
 
-    if (part.includes("-")) {
-      const rangeParts = part.split("-");
+    if (part.includes('-')) {
+      const rangeParts = part.split('-');
       if (rangeParts.length !== 2) {
         return;
       }

@@ -5,20 +5,17 @@
     "lib": ["esnext"],
     "types": ["node", "jest"],
     "outDir": "dist",
+    "rootDir": "src",
 
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
 
     "noUnusedLocals": true,
     "noUnusedParameters": true,
 
     "strict": true,
     "noUncheckedSideEffectImports": true,
-    "isolatedModules": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
   },

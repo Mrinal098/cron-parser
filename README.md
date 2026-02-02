@@ -16,11 +16,42 @@ npm run build
 
 ## Usage
 
+### Using npm script
+
 ```bash
 npm run parse "*/15 0 1,15 * 1-5 /usr/bin/find"
 ```
 
-Output:
+### Using as global CLI command
+
+You can install the parser globally and use it as a CLI command:
+
+```bash
+# Link the package globally
+npm link
+
+# Now use it from anywhere
+cron-parser "*/15 0 1,15 * 1-5 /usr/bin/find"
+```
+
+To unlink later:
+```bash
+npm unlink -g cron-parser
+```
+
+### Using in another project
+
+```bash
+# Install from local path
+npm install /path/to/cron-parser
+
+# Or link it
+cd /path/to/other-project
+npm link cron-parser
+```
+
+### Output
+
 ```
 minute        0 15 30 45
 hour          0

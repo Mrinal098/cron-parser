@@ -7,19 +7,19 @@ export const FieldRanges: Record<string, { min: number; max: number }> = {
 };
 
 export const FieldNames = [
-  "minute",
-  "hour",
-  "dayOfMonth",
-  "month",
-  "dayOfWeek",
-  "command",
+  'minute',
+  'hour',
+  'dayOfMonth',
+  'month',
+  'dayOfWeek',
+  'command',
 ];
 
 export const FieldDisplayNames: Record<string, string> = {
-  minute: "minute",
-  hour: "hour",
-  dayOfMonth: "day of month",
-  month: "month",
-  dayOfWeek: "day of week",
-  command: "command",
+  minute: 'minute',
+  hour: 'hour',
+  dayOfMonth: 'day of month',
+  month: 'month',
+  dayOfWeek: 'day of week',
+  command: 'command',
 };

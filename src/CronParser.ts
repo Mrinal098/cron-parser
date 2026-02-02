@@ -1,16 +1,16 @@
-import { FieldDisplayNames, FieldNames, FieldRanges } from "./constants.js";
-import FieldParser from "./FieldParser.js";
-import { CronParserOutputType } from "./types.js";
-import CronValidator from "./validators/CronValidator.js";
+import { FieldDisplayNames, FieldNames, FieldRanges } from './constants.js';
+import FieldParser from './FieldParser.js';
+import { CronParserOutputType } from './types.js';
+import CronValidator from './validators/CronValidator.js';
 
 export default class CronParser {
   public parse(cronString: string): CronParserOutputType {
     CronValidator.validate(cronString);
 
-    const expressions: string[] = cronString.trim().split(" ");
+    const expressions: string[] = cronString.trim().split(' ');
 
     const output: CronParserOutputType = {
-      command: expressions[5] || "",
+      command: expressions[5] || '',
     };
 
     for (let index = 0; index < expressions.length - 1; index++) {
@@ -45,12 +45,12 @@ export default class CronParser {
   }
 
   private formatOutput(output: CronParserOutputType): string {
-    let result = "";
+    let result = '';
     for (const key of FieldNames) {
       const value = output[key];
       const displayName = FieldDisplayNames[key] || key;
       if (Array.isArray(value)) {
-        result += `${displayName.padEnd(14)}${value.join(" ")}\n`;
+        result += `${displayName.padEnd(14)}${value.join(' ')}\n`;
       } else {
         result += `${displayName.padEnd(14)}${value}\n`;
       }
